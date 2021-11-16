@@ -1,0 +1,15 @@
+/Users/dimitry/Work/Study/AdventOfCode/bin/Debug/net6.0/AdventureOfCode
+/Users/dimitry/Work/Study/AdventOfCode/bin/Debug/net6.0/AdventureOfCode.deps.json
+/Users/dimitry/Work/Study/AdventOfCode/bin/Debug/net6.0/AdventureOfCode.runtimeconfig.json
+/Users/dimitry/Work/Study/AdventOfCode/bin/Debug/net6.0/AdventureOfCode.dll
+/Users/dimitry/Work/Study/AdventOfCode/bin/Debug/net6.0/ref/AdventureOfCode.dll
+/Users/dimitry/Work/Study/AdventOfCode/bin/Debug/net6.0/AdventureOfCode.pdb
+/Users/dimitry/Work/Study/AdventOfCode/obj/Debug/net6.0/AdventureOfCode.csproj.AssemblyReference.cache
+/Users/dimitry/Work/Study/AdventOfCode/obj/Debug/net6.0/AdventureOfCode.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dimitry/Work/Study/AdventOfCode/obj/Debug/net6.0/AdventureOfCode.AssemblyInfoInputs.cache
+/Users/dimitry/Work/Study/AdventOfCode/obj/Debug/net6.0/AdventureOfCode.AssemblyInfo.cs
+/Users/dimitry/Work/Study/AdventOfCode/obj/Debug/net6.0/AdventureOfCode.csproj.CoreCompileInputs.cache
+/Users/dimitry/Work/Study/AdventOfCode/obj/Debug/net6.0/AdventureOfCode.dll
+/Users/dimitry/Work/Study/AdventOfCode/obj/Debug/net6.0/ref/AdventureOfCode.dll
+/Users/dimitry/Work/Study/AdventOfCode/obj/Debug/net6.0/AdventureOfCode.pdb
+/Users/dimitry/Work/Study/AdventOfCode/obj/Debug/net6.0/AdventureOfCode.genruntimeconfig.cache

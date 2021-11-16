@@ -1,0 +1,15 @@
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/bin/Debug/net6.0/Day 01
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/bin/Debug/net6.0/Day 01.deps.json
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/bin/Debug/net6.0/Day 01.runtimeconfig.json
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/bin/Debug/net6.0/Day 01.dll
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/bin/Debug/net6.0/ref/Day 01.dll
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/bin/Debug/net6.0/Day 01.pdb
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/obj/Debug/net6.0/Day 01.csproj.AssemblyReference.cache
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/obj/Debug/net6.0/Day 01.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/obj/Debug/net6.0/Day 01.AssemblyInfoInputs.cache
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/obj/Debug/net6.0/Day 01.AssemblyInfo.cs
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/obj/Debug/net6.0/Day 01.csproj.CoreCompileInputs.cache
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/obj/Debug/net6.0/Day 01.dll
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/obj/Debug/net6.0/ref/Day 01.dll
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/obj/Debug/net6.0/Day 01.pdb
+/Users/dimitry/Work/Study/AdventOfCode/2020/Day 01/obj/Debug/net6.0/Day 01.genruntimeconfig.cache
