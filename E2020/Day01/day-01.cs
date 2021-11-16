@@ -209,17 +209,42 @@ namespace AdventureOfCode.E2020
         {
             Console.WriteLine("Day 01");
 
+            Console.WriteLine($" Answer 1st part: {ProductOf2()}");
+            Console.WriteLine($" Answer 2nd part: {ProductOf3()}");
+        }
+
+        private static int ProductOf2()
+        {
             for(int i = 0, length = _input.Length; i < length; i++)
             {
                 for(int j = i + 1; j < length - i; j++)
                 {
                     if(_input[i] + _input[j] == 2020) {
-                        Console.WriteLine($"Answer: {_input[i] * _input[j]}");
 
-                        return;
+                        return _input[i] * _input[j];
                     }
                 }
             }
+
+            return -1;
+        }
+
+        private static int ProductOf3()
+        {
+            for(int i = 0, length = _input.Length; i < length; i++)
+            {
+                for(int j = i + 1; j < length - i; j++)
+                {
+                    for(int k = j + 1; k < length - j; k++)
+                    {
+                        if(_input[i] + _input[j] +_input[k]== 2020) {
+                            return _input[i] * _input[j] * _input[k];
+                        }
+                    }
+                }
+            }
+
+            return -1;
         }
     }
 }
