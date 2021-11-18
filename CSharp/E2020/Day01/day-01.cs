@@ -220,7 +220,6 @@ namespace AdventureOfCode.E2020
                 for(int j = i + 1; j < length - i; j++)
                 {
                     if(_input[i] + _input[j] == 2020) {
-
                         return _input[i] * _input[j];
                     }
                 }
@@ -237,7 +236,7 @@ namespace AdventureOfCode.E2020
                 {
                     for(int k = j + 1; k < length - j; k++)
                     {
-                        if(_input[i] + _input[j] +_input[k]== 2020) {
+                        if(_input[i] + _input[j] +_input[k] == 2020) {
                             return _input[i] * _input[j] * _input[k];
                         }
                     }
