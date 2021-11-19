@@ -38,7 +38,9 @@ def GoDownTheSlope(dx, dy):
     return trees
 
 def Part1():
-    return GoDownTheSlope(3, 1)
+    slope31 = GoDownTheSlope(3, 1)
+
+    return slope31
 
 def Part2():
     slope11 = GoDownTheSlope(1, 1)
