@@ -52,4 +52,4 @@ def Part2():
     return slope11 * slope31 * slope51 * slope71 * slope12
 
 print(f" Answer 1st part is {Part1()}")
-print(f" Answer 1st part is {Part2()}")
+print(f" Answer 2nd part is {Part2()}")
