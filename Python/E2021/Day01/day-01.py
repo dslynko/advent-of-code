@@ -4,32 +4,29 @@ def ReadInput():
     with open("./input.txt") as input:
         return input.read().splitlines()
 
-def Part1(divesHistory):
+def CheckDepthHistory(divesHistory, diveToCompareIdx):
     depthIncreases = 0
-    previousDepth = 0
 
-    for i in range(len(divesHistory)):
-        currentDepth = int(divesHistory[i])
-
-        if(currentDepth > previousDepth):
-            depthIncreases += 1
-
-        previousDepth = currentDepth
-
-    return depthIncreases - 1;
-
-def Part2(divesHistory):
-    tripleDivesHistory = []
-
-    i = 2
+    i = diveToCompareIdx
     length = len(divesHistory)
 
     while(i < length):
-        tripleSum = int(divesHistory[i - 2]) + int(divesHistory[i - 1]) + int(divesHistory[i])
-        tripleDivesHistory.append(tripleSum)
+        currentDepth = int(divesHistory[i])
+        previousDepth = int(divesHistory[i - diveToCompareIdx])
+
+        depthIncreases += (1 if currentDepth > previousDepth else 0)
+
         i += 1
 
-    return Part1(tripleDivesHistory)
+    return depthIncreases
+
+def Part1(divesHistory):
+    # a < b when (obwious) a < b, so 1 step back
+    return CheckDepthHistory(divesHistory, 1)
+
+def Part2(divesHistory):
+    # a + b + c < b + c + d  when a < d, so 3 steps back
+    return CheckDepthHistory(divesHistory, 3)
 
 divesHistory = ReadInput()
 

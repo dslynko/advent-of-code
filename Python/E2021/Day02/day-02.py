@@ -1,5 +1,9 @@
 print("E2021 - Day 02");
 
+def ReadInput():
+    with open("./input.txt") as input:
+        return input.read().splitlines()
+
 class Maneuver:
     def __init__(self, command):
         action = command.split(" ")
@@ -40,12 +44,13 @@ class U96Aimed(U96):
         else:
             self.aim += (action.distance if action.direction == "down" else action.distance * -1)
 
-def PartX(dasBoot: IDasBoot):
-    with open('./input.txt') as input:
-        for line in input:
-            dasBoot.ExecuteManeuver(Maneuver(line))
+def PartX(dasBoot: IDasBoot, commands):
+    for i in range(len(commands)):
+        dasBoot.ExecuteManeuver(Maneuver(commands[i]))
 
     return dasBoot.GetPosition()
 
-print(f" Answer 1st part is {PartX(U96())}")
-print(f" Answer 2st part is {PartX(U96Aimed())}")
+commands = ReadInput()
+
+print(f" Answer 1st part is {PartX(U96(), commands)}")
+print(f" Answer 2st part is {PartX(U96Aimed(), commands)}")
