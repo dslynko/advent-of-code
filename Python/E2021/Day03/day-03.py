@@ -1,12 +1,8 @@
-print("E2021 - Day 03 #########################s");
+print("E2021 - Day 03");
 
 def ReadInput():
     with open("./input.txt") as input:
         return input.read().splitlines()
-
-def PrettyBin(n):
-    b = bin(n)[2:]
-    return b.zfill(12)
 
 def GetRates(report: list, default = "1"):
     rates = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -18,15 +14,18 @@ def GetRates(report: list, default = "1"):
             if(report[i][j] == "1"):
                 rates[j] += 1
 
-    gammaRate = ""
+    gammaRate = epsilonRate = ""
 
     for i in range(len(rates)):
-        gammaRate += (default if rates[i] == reportLength / 2 else "1" if rates[i] > reportLength / 2 else "0")
-
-    print(f"gammaRate: {gammaRate}")
-    gammaRate = int(gammaRate, 2)
-    epsilonRate = ~gammaRate & 0xFFF
-    print(f"epslnRate: {PrettyBin(epsilonRate)}")
+        if(rates[i] == reportLength / 2):
+            gammaRate += default
+            epsilonRate += default
+        if(rates[i] > reportLength / 2):
+            gammaRate += "1"
+            epsilonRate += "0"
+        else:
+            gammaRate += "0"
+            epsilonRate += "1"
 
     return (gammaRate, epsilonRate)
 
@@ -36,35 +35,33 @@ def GetLifeSupportRating(report: list, defaultNumber):
     while(True):
         (gammaRate, epsilonRate) = GetRates(report, defaultNumber)
 
-        mask = PrettyBin(gammaRate if defaultNumber == "1" else epsilonRate)
-        print(f"mask: {mask}")
-
-        maskBit = mask[bitPositionInMask]
+        mask = gammaRate if defaultNumber == "1" else epsilonRate
 
         report = list(filter(lambda number: number[bitPositionInMask] == mask[bitPositionInMask], report))
-        print(f"CUT (len: {len(report)} pos: {bitPositionInMask}): {report}")
 
         if(len(report) == 1):
-            print(report)
-            print(f"  {mask}")
-            return int(report[0], 2)
+            return report[0]
 
         bitPositionInMask += 1
 
-        if bitPositionInMask > 12: return -1
+def GetOxygenGeneratorRate(report: list):
+    return GetLifeSupportRating(report, "1")
+
+def GetCO2ScrubberRate(report: list):
+    return GetLifeSupportRating(report, "0")
 
 def Part1(report):
     (gammaRate, epsilonRate) = GetRates(report)
 
-    return gammaRate * epsilonRate
+    return int(gammaRate, 2) * int(epsilonRate, 2)
 
 def Part2(report: list):
-    oxygenGeneratorRate = GetLifeSupportRating(report, "1")
-    co2ScrubberRate = GetLifeSupportRating(report, "0")
+    oxygenGeneratorRate = GetOxygenGeneratorRate(report)
+    co2ScrubberRate = GetCO2ScrubberRate(report)
 
-    return oxygenGeneratorRate * co2ScrubberRate
+    return int(oxygenGeneratorRate, 2) * int(co2ScrubberRate, 2)
 
 report = ReadInput()
 
 print(f" Answer 1st part is {Part1(report)}")
-#print(f" Answer 2st part is {Part2(report)}")
+print(f" Answer 2st part is {Part2(report)}")
