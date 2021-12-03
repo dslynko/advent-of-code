@@ -14,18 +14,8 @@ def GetRates(report: list, default = "1"):
             if(report[i][j] == "1"):
                 rates[j] += 1
 
-    gammaRate = epsilonRate = ""
-
-    for i in range(len(rates)):
-        if(rates[i] == reportLength / 2):
-            gammaRate += default
-            epsilonRate += default
-        if(rates[i] > reportLength / 2):
-            gammaRate += "1"
-            epsilonRate += "0"
-        else:
-            gammaRate += "0"
-            epsilonRate += "1"
+    gammaRate = "".join(list(map(lambda x: default if x == reportLength / 2 else "1" if x > reportLength / 2 else "0", rates)))
+    epsilonRate = "".join(list(map(lambda x: default if x == reportLength / 2 else "0" if x > reportLength / 2 else "1", rates)))
 
     return (gammaRate, epsilonRate)
 
