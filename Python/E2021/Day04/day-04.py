@@ -37,7 +37,7 @@ def ReadInput():
             line = line.rstrip("\n")
 
             if(firstLine):
-                randomSet = list(map(lambda x: int(x), line.split(",")))
+                randomSet = list(map(int, line.split(",")))
                 firstLine = False
                 continue
 
@@ -47,7 +47,7 @@ def ReadInput():
                     numbers = []
                 continue
 
-            numbers.append(list(map(lambda x: int(x), line.split())))
+            numbers.append(list(map(int, line.split())))
 
     return (randomSet, cards)
 
