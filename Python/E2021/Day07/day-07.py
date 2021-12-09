@@ -1,4 +1,4 @@
-print("E2021 - Day 06");
+print("E2021 - Day 07");
 
 def ReadInput():
     with open("./input.txt") as input:
@@ -13,11 +13,11 @@ def PartX(calculateFuel):
         fuel = 0
         for j in range(len(positions)):
             fuel += calculateFuel(abs(positions[j] - i))
-            if(minFuel > 0 and fuel > minFuel):
+            if(fuel > minFuel and minFuel > 0):
                 break
         minFuel = min(minFuel, fuel) if minFuel != -1 else fuel
 
     return minFuel
 
-print(f" Answer 1st part is {PartX(lambda x: x)}")
-print(f" Answer 2st part is {PartX(lambda x: int(((1 + x) * x) / 2))}")
+print(f" Answer 1st part is {PartX(lambda n: n)}")
+print(f" Answer 2st part is {PartX(lambda n: int((1 + n) * n / 2))}")
