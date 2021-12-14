@@ -47,40 +47,37 @@ class Octopus:
 
         return flashes
 
-def PartX():
-    input = ReadInput()
+input = ReadInput()
 
-    for row in range(len(input)):
-        for col in range(len(input[row])):
-            octopuses.append(Octopus(row, col, int(input[row][col])))
+for row in range(len(input)):
+    for col in range(len(input[row])):
+        octopuses.append(Octopus(row, col, int(input[row][col])))
+
+for octopus in octopuses:
+    octopus.FillNeibhours(octopuses)
+
+step = 0
+flashes = 0
+
+while(True):
+    step += 1
 
     for octopus in octopuses:
-        octopus.FillNeibhours(octopuses)
+        octopus.FirstStep()
 
-    step = 0
-    flashes = 0
+    for octopus in octopuses:
+        octopus.Flash()
 
-    while(True):
-        step += 1
+    stepFlashes = 0
 
-        for octopus in octopuses:
-            octopus.FirstStep()
+    for octopus in octopuses:
+        stepFlashes += octopus.FinalStep()
 
-        for octopus in octopuses:
-            octopus.Flash()
+    flashes += stepFlashes
 
-        stepFlashes = 0
+    if(step == 100):
+        print(f" Answer 1st part is {flashes}")
 
-        for octopus in octopuses:
-            stepFlashes += octopus.FinalStep()
-
-        flashes += stepFlashes
-
-        if(step == 100):
-            print(f" Answer 1st part is {flashes}")
-
-        if(stepFlashes == len(octopuses)):
-            print(f" Answer 2nd part is {step}")
-            break
-
-PartX()
+    if(stepFlashes == len(octopuses)):
+        print(f" Answer 2nd part is {step}")
+        break
