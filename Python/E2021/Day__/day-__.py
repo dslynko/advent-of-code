@@ -1,4 +1,4 @@
-print("E2021 - Day __");
+print("E2021 - Day __")
 
 def ReadInput():
     with open("./input.txt") as input:
